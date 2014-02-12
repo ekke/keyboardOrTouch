@@ -1,0 +1,11 @@
+<model>
+  <column loop="true">
+    <itemcolor image="red" displayname="Red" />
+    <itemcolor image="yellow" displayname="Yellow" />
+	<itemcolor image="green" displayname="Green" />
+	<itemcolor image="cyan" displayname="Cyan" />
+	<itemcolor image="blue" displayname="Blue" />
+	<itemcolor image="magenta" displayname="Magenta" />
+	<itemcolor image="gray" displayname="Gray" />
+  </column>
+</model>

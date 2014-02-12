@@ -1,0 +1,1 @@
+include (../KeyboardOrTouch.pro)
