@@ -25,18 +25,34 @@ NavigationPane {
             leftPadding: 40
             rightPadding: 40
             Label {
-                text: "You pressed this Key:"
+                text: "Please connect your external device via Bluetooth or USB, then try the keys to get values for your KeyListeners"
+                multiline: true
+            }
+            Divider {
             }
             Label {
-                id: keyLabel
-                text: "??"
+                text: "You pressed this Key:"
+            }
+            Container {
+                leftPadding: 60
+                Label {
+                    id: keyLabel
+                    text: "....."
+                    textStyle.base: SystemDefaults.TextStyles.BigText
+                    textStyle.color: Color.Magenta
+                }
             }
             Label {
                 text: "You pressed this KeyCap:"
             }
-            Label {
-                id: keyCapLabel
-                text: "??"
+            Container {
+                leftPadding: 60
+                Label {
+                    id: keyCapLabel
+                    text: "....."
+                    textStyle.base: SystemDefaults.TextStyles.BigText
+                    textStyle.color: Color.Magenta
+                }
             }
         }
     }
