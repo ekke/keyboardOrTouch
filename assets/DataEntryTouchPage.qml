@@ -31,6 +31,14 @@ Page {
         title: "Data Entry"
     }
     actions: [
+        ActionItem {
+            title: "Magenta"
+            imageSource: "asset:///images/my_color.png"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                colorPicker.select(0, 5)
+            }
+        },
         DeleteActionItem {
             onTriggered: {
                 initData()
@@ -68,11 +76,11 @@ Page {
                         spaceQuota: 2.0
                     }
                     input {
-                        submitKey: SubmitKey.Next;   
+                        submitKey: SubmitKey.Next
                         flags: TextInputFlag.SpellCheck | TextInputFlag.Prediction
                     }
                     onTextChanged: {
-                    	//
+                        //
                     }
                 }
             } // end labelContainer
@@ -101,7 +109,7 @@ Page {
                     }
                     inputMode: TextFieldInputMode.Pin
                     input {
-                        submitKey: SubmitKey.Next;   
+                        submitKey: SubmitKey.Next
                     }
                     onTextChanging: {
                         var x = text.replace("A", "")
@@ -171,7 +179,7 @@ Page {
                             text: "FF"
                             inputMode: TextFieldInputMode.Pin
                             input {
-                                submitKey: SubmitKey.Next;   
+                                submitKey: SubmitKey.Next
                             }
                             hintText: "FF"
                             onTextChanged: {
@@ -203,9 +211,10 @@ Page {
                         text: "FFFFFF"
                         inputMode: TextFieldInputMode.Pin
                         input {
-                            submitKey: SubmitKey.Done;   
+                            submitKey: SubmitKey.Done
                             onSubmitted: {
-                                flags: TextInputFlag.VirtualKeyboardOff
+                                flags:
+                                TextInputFlag.VirtualKeyboardOff
                                 colorbar.requestFocus()
                             }
                         }

@@ -4,22 +4,22 @@
 <context>
     <name>DataEntryKeyPage</name>
     <message>
-        <location filename="../assets/DataEntryKeyPage.qml" line="66"/>
+        <location filename="../assets/DataEntryKeyPage.qml" line="79"/>
         <source>Some Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryKeyPage.qml" line="86"/>
+        <location filename="../assets/DataEntryKeyPage.qml" line="99"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryKeyPage.qml" line="98"/>
+        <location filename="../assets/DataEntryKeyPage.qml" line="111"/>
         <source>Value: &gt;= 0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryKeyPage.qml" line="312"/>
+        <location filename="../assets/DataEntryKeyPage.qml" line="325"/>
         <source>Predefined Colors</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27,22 +27,22 @@
 <context>
     <name>DataEntryTouchPage</name>
     <message>
-        <location filename="../assets/DataEntryTouchPage.qml" line="66"/>
+        <location filename="../assets/DataEntryTouchPage.qml" line="74"/>
         <source>Some Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryTouchPage.qml" line="86"/>
+        <location filename="../assets/DataEntryTouchPage.qml" line="94"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryTouchPage.qml" line="98"/>
+        <location filename="../assets/DataEntryTouchPage.qml" line="106"/>
         <source>Value: &gt;= 0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryTouchPage.qml" line="276"/>
+        <location filename="../assets/DataEntryTouchPage.qml" line="285"/>
         <source>Predefined Colors</source>
         <translation type="unfinished"></translation>
     </message>

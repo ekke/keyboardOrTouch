@@ -31,6 +31,19 @@ Page {
         title: "Data Entry"
     }
     actions: [
+        ActionItem {
+            title: "Magenta"
+            imageSource: "asset:///images/my_color.png"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                colorPicker.select(0, 5)
+            }
+            shortcuts: [
+                Shortcut {
+                    key: 'm'
+                }
+            ]
+        },
         DeleteActionItem {
             onTriggered: {
                 initData()
