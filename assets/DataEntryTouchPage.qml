@@ -189,16 +189,6 @@ Page {
                                     alphaText.text = dataEntryPage.alphaValue
                                 }
                             }
-                            validator: Validator {
-                                mode: ValidationMode.Immediate
-                                errorMessage: "Alpha Value must be 00 ... FF"
-                                onValidate: {
-                                    if (alphaText.text.length == 2)
-                                        state = ValidationState.Valid;
-                                    else
-                                        state = ValidationState.Invalid;
-                                }
-                            }
                         }
                     }
                     TextField {
