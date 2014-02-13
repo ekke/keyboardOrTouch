@@ -229,16 +229,6 @@ Page {
                                 rgbText.text = dataEntryPage.redValue + dataEntryPage.greenValue + dataEntryPage.blueValue
                             }
                         }
-                        validator: Validator {
-                            mode: ValidationMode.Immediate
-                            errorMessage: "RGB Value must be 000000 ... FFFFFF"
-                            onValidate: {
-                                if (rgbText.text.length == 6)
-                                    state = ValidationState.Valid;
-                                else
-                                    state = ValidationState.Invalid;
-                            }
-                        }
                     }
                 } // end innerColorContainer
             } // end colorContainer
