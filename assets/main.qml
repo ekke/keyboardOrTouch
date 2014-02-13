@@ -19,7 +19,17 @@ import bb.cascades 1.2
 TabbedPane {
     id: rootPane
     showTabsOnActionBar: true
-    
+    keyListeners: [
+        KeyListener {
+            id: homeKey
+            onKeyReleased: {
+            	// F1
+                if(event.key == 190 ){
+                    activeTab = homeTab
+                }
+            }
+        }
+    ]
     Tab {
         id: homeTab
         title: "Home"

@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryKeyPage.qml" line="325"/>
+        <location filename="../assets/DataEntryKeyPage.qml" line="335"/>
         <source>Predefined Colors</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/DataEntryTouchPage.qml" line="285"/>
+        <location filename="../assets/DataEntryTouchPage.qml" line="265"/>
         <source>Predefined Colors</source>
         <translation type="unfinished"></translation>
     </message>

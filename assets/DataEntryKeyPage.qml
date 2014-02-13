@@ -130,6 +130,16 @@ Page {
                             valueText.text = 0
                         }
                     }
+                    validator: Validator {
+                        mode: ValidationMode.Immediate
+                        errorMessage: "Value must be numeric"
+                        onValidate: {
+                            if (isValidNumber(valueText.text))
+                                state = ValidationState.Valid;
+                            else
+                                state = ValidationState.Invalid;
+                        }
+                    }
                 } // end valuetext
             } // end valueUnitContainer
             Divider {
@@ -198,7 +208,7 @@ Page {
                                 mode: ValidationMode.Immediate
                                 errorMessage: "Alpha Value must be 00 ... FF"
                                 onValidate: {
-                                    if (alphaText.text.length == 2)
+                                    if (alphaText.text.length == 2 && isValidAlpha(alphaText.text))
                                         state = ValidationState.Valid;
                                     else
                                         state = ValidationState.Invalid;
@@ -238,7 +248,7 @@ Page {
                             mode: ValidationMode.Immediate
                             errorMessage: "RGB Value must be 000000 ... FFFFFF"
                             onValidate: {
-                                if (rgbText.text.length == 6)
+                                if (rgbText.text.length == 6 && isValidColor(rgbText.text))
                                     state = ValidationState.Valid;
                                 else
                                     state = ValidationState.Invalid;
@@ -398,6 +408,32 @@ Page {
                             }
                         }
                     ]
+                    keyListeners: [
+                        KeyListener {
+                            id: upAndDownKeys
+                            onKeyReleased: {
+                                if(event.keycap == 61522){
+                                    // ARROW-UP
+                                    var row = colorPicker.selectedIndex(0)
+                                    if(row >0){
+                                        row --
+                                    } else {
+                                        row = 6
+                                    }
+                                    colorPicker.select(0,row)
+                                } else if (event.keycap == 61524){
+                                    // ARROW-DOWN
+                                    var row = colorPicker.selectedIndex(0)
+                                    if(row < 6){
+                                        row ++
+                                    } else {
+                                        row = 0
+                                    }
+                                    colorPicker.select(0,row)
+                                }
+                            }
+                        }
+                    ]
                 } // end colorPicker
             } // predefinedColorContainer
         } // end outerContainer
@@ -415,6 +451,15 @@ Page {
         redValue = newRed
         greenValue = newGreen
         blueValue = newBlue
+    }
+    function isValidNumber(str){
+        return !isNaN(str) 
+    }
+    function isValidAlpha(str) {
+        return str.match(/^[a-f0-9]{2}$/i) !== null
+    }
+    function isValidColor(str) {
+        return str.match(/^[a-f0-9]{6}$/i) !== null
     }
     function initData() {
         colorPicker.select(0, 0)
