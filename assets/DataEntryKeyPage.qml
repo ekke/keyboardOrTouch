@@ -398,8 +398,12 @@ Page {
                         Shortcut {
                             key: 'Space'
                             onTriggered: {
+                                // this will give us the number of elements
+                                var size = colorPicker.dataModel.childCount([0])
+                                // max value for loop
+                                var max = size-1
                                 var row = colorPicker.selectedIndex(0)
-                                if(row < 6){
+                                if(row < max){
                                     row ++
                                 } else {
                                     row = 0
